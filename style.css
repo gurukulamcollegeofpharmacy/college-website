@@ -1,0 +1,201 @@
+/* ----------------------------------------------------
+   GLOBAL VARIABLES & BASE STYLE
+---------------------------------------------------- */
+:root{
+  --bg: #f4f6f8;
+  --white: #ffffff;
+  --dark: #111827;
+  --muted: #4b5563;
+  --accent: #1f6fb4;     /* blue color for headings */
+  --container: 1100px;
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html,body { height: 100%; margin: 0; padding: 0; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Container used everywhere */
+.container {
+  width: calc(100% - 2rem);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 1.25rem 0;
+}
+
+/* ----------------------------------------------------
+   TOP HEADER (BLACK WITH ONLY COLLEGE NAME)
+---------------------------------------------------- */
+.top-header {
+  background: #121317;
+  color: #fff;
+  padding: 0.65rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.top-header__inner {
+  display: flex;
+  align-items: center;
+}
+
+.site-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+/* ----------------------------------------------------
+   HERO IMAGE (FULL WIDTH)
+---------------------------------------------------- */
+.hero {
+  width: auto;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.hero__image {
+  width: auto;
+  height: clamp(300px, 45vh, 700px);
+  margin: 0 auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ----------------------------------------------------
+   MAIN CONTENT
+---------------------------------------------------- */
+.main-content {
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+/* Title under image */
+.intro {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.intro__title {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  margin: 0;
+  font-weight: 700;
+}
+
+.intro__subtitle {
+  margin-top: 0.3rem;
+  color: var(--accent);
+  font-size: 1.05rem;
+}
+
+/* ----------------------------------------------------
+   SECTIONS
+---------------------------------------------------- */
+.section {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.section__title {
+  margin-top: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.section__text {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+}
+
+.info-list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--muted);
+}
+
+.info-list li {
+  margin: 0.4rem 0;
+}
+
+/* ----------------------------------------------------
+   FOOTER (COMPACT VERSION)
+---------------------------------------------------- */
+.site-footer {
+  background: var(--white);
+  padding-top: 0.8rem;     
+  padding-bottom: 0.8rem;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  margin-top: 1.5rem; /* separation from content */
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+/* Footer heading */
+.footer-title {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Contact rows */
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* Email link */
+.email-link {
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.email-link:hover {
+  text-decoration: underline;
+}
+
+/* COPYRIGHT text */
+.copyright {
+  text-align: center;
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ----------------------------------------------------
+   RESPONSIVE
+---------------------------------------------------- */
+@media (max-width: 600px) {
+  .hero__image {
+    height: 240px;
+    object-position: center 40%;
+  }
+
+  .site-name {
+    font-size: 1rem;
+  }
+
+  .intro__title {
+    font-size: 1.55rem;
+  }
+}
